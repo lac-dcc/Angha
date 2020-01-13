@@ -1,0 +1,3 @@
+[submodule "src/psychec"]
+	path = src/psychec
+	url = https://github.com/ltcmelo/psychec
