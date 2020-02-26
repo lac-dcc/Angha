@@ -38,7 +38,7 @@ You can then run the plugin with Clang by doing the following:
 ```
 PLUGIN_LIB=<path_to_repo>/build/libFunctionExtractor.so
 
-clang -cc1 -load $PLUGIN_LIB -plugin -extract-funcs <input_file> -fsyntax-only
+clang -cc1 -load $PLUGIN_LIB -plugin extract-funcs <input_file> -fsyntax-only
 ```
 
 Then, for each function definition found in the input file, Function Extractor
