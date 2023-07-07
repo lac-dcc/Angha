@@ -100,7 +100,7 @@ private:
 public:
 explicit WholeFileVisitor(CompilerInstance *CI, StringRef file)
 	: astContext(&(CI->getASTContext())) {
-		_outFileName = file;
+		_outFileName = file.str();
 		_outFileName = validateFilename("extr_wholefile_" + _outFileName);
 	}
 	
@@ -186,7 +186,7 @@ public:
 		string outfileName;
 
 		/*open output file, format: "extr_originfile_functionname.c"*/
-		inputFile = validateFilename(mng.getFilename(D->getSourceRange().getBegin()));
+		inputFile = validateFilename(mng.getFilename(D->getSourceRange().getBegin()).str());
 		funcName = D->getNameInfo().getName().getAsString();
 		outfileName = "extr_" + inputFile + "_" + funcName + ".c";
 		

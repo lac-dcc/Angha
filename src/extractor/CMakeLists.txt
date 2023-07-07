@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
+project(FunctionExtractor)
+
 cmake_policy(SET CMP0057 NEW)
 
 list(APPEND CMAKE_MODULE_PATH "${LLVM_DIR}")
